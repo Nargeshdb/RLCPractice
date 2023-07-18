@@ -6,11 +6,11 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+//testing
 public class SocketWrapper {
     private final Socket socket;
     private BufferedReader input;
     private PrintWriter output;
-
     public SocketWrapper(Socket socket) {
         this.socket = socket;
     }
