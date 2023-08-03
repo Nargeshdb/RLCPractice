@@ -7,7 +7,7 @@ public class Main {
         Server server = new Server();
         Thread serverThread = new Thread(() -> {
             try {
-                server.start(8080);
+                server.start("address", 8080);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

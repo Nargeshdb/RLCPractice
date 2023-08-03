@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class SocketWrapper {
+
     private final Socket socket;
     private BufferedReader input;
     private PrintWriter output;

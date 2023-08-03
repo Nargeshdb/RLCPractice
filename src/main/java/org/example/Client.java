@@ -1,38 +1,16 @@
 package org.example;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.Socket;
-
 
 public class Client {
 
     public void start(String serverIP, int serverPort) {
-        SocketWrapper socket = null;
+        ClientWrapper s = new ClientWrapper();
         try {
-            Socket s = new Socket(serverIP, serverPort);
-            socket = new SocketWrapper(s);
+            s.setupConnection(serverIP, serverPort);
             System.out.println("Connected to server: " + serverIP + ":" + serverPort);
-
-            BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-
-            String message;
-
-            System.out.print("Enter a message to send to the server (or 'quit' to exit): ");
-            message = input.readLine();
-
-            socket.sendMessage(message);
-            System.out.println("Server response: " + socket.receiveMessage());
-
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
-        } finally {
-            try {
-                if (socket != null) socket.close();
-            } catch (IOException e) {
-                System.out.println("Error closing socket: " + e.getMessage());
-            }
         }
     }
 }

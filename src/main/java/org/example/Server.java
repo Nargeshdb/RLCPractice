@@ -6,15 +6,14 @@ import java.net.Socket;
 
 public class Server {
 
-    public void start(int port) throws IOException {
-        ServerSocket serverSocket = null;
+    public void start(String address, int port) throws IOException {
+        Socket serverSocket = null;
         SocketWrapper clientSocket = null;
         Socket socket = null;
         try {
-            serverSocket = new ServerSocket(port);
+            serverSocket = new Socket(address, port);
             System.out.println("Server started on port " + port);
 
-            socket = serverSocket.accept();
             clientSocket = new SocketWrapper(socket);
             System.out.println("Client connected: " + clientSocket.getSocket().getInetAddress().getHostAddress());
 
@@ -28,8 +27,6 @@ public class Server {
         } finally {
             try {
                 if (serverSocket != null) serverSocket.close();
-                if (socket != null) socket.close();
-                if (clientSocket != null) clientSocket.close();
             } catch (IOException e) {
                 if (socket != null) socket.close();
                 System.out.println("Error closing sockets: " + e.getMessage());
