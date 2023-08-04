@@ -2,9 +2,16 @@ package org.example;
 
 import java.io.IOException;
 import java.net.Socket;
+import org.checkerframework.checker.mustcall.qual.*;
+import org.checkerframework.checker.calledmethods.qual.*;
 
 public class ClientWrapper {
     protected Socket socket = null;
+
+    public ClientWrapper(String address, int port) throws IOException {
+        this.socket = new Socket(address, port);
+    }
+
     protected void setupConnection(String address, int port) throws IOException {
         // This is the original test case. Before this issue was fixed, an error was issued on the
         // second line.

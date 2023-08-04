@@ -26,7 +26,7 @@ public class Server {
             System.out.println("Error: " + e.getMessage());
         } finally {
             try {
-                if (serverSocket != null) serverSocket.close();
+                if (clientSocket != null) clientSocket.close();
             } catch (IOException e) {
                 if (socket != null) socket.close();
                 System.out.println("Error closing sockets: " + e.getMessage());
