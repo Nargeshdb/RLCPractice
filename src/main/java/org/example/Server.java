@@ -12,6 +12,7 @@ public class Server {
         Socket socket = null;
         try {
             serverSocket = new Socket(address, port);
+            serverSocket.close();
             System.out.println("Server started on port " + port);
 
             clientSocket = new SocketWrapper(socket);

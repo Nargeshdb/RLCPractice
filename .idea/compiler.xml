@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.checkerframework/checker/3.36.0/cfa5782f0a924ea74b084a6ec8a34bdd125b15f5/checker-3.36.0.jar" />
+          <entry name="$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-util/3.36.0/f68b965279736dac4f243488b013994bb4d41b7d/checker-util-3.36.0.jar" />
+          <entry name="$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.36.0/62ea2b911acf3a3eecd25a1a2986864b7403f6d2/checker-qual-3.36.0.jar" />
+          <entry name="$PROJECT_DIR$/build/checkerframework" />
+        </processorPath>
+        <module name="RLCPractice.main" />
+        <module name="RLCPractice.test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+</project>
