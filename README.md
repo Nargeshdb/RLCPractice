@@ -8,7 +8,7 @@ The Resource Leak Checker is a static analysis tool that checks for resource lea
 A resource leak occurs when a program fails to close a resource, such as a file or a socket. Resource leaks can lead
 to bugs, security vulnerabilities, and performance problems. You can see a couple of small examples of resource leaks
 in [this blog post](https://aws.amazon.com/blogs/devops/resource-leak-detection-in-amazon-codeguru/) but you should also
-search for other background resources.
+search for other relevant documents if you are unfamiliar with resource leaks.
 
 The Resource Leak Checker is part of the [Checker Framework](https://checkerframework.org/), which is a collection of
 pluggable type checkers. To learn more about pluggable type checking in general, read Chapters 1 and 2 in
