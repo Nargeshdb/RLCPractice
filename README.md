@@ -15,7 +15,7 @@ pluggable type checkers. To learn more about pluggable type checking in general,
 the [Checker Framework manual](https://checkerframework.org/manual/). Then,
 read [Chapter 8](https://checkerframework.org/manual/#resource-leak-checker) to learn specifically about the Resource
 Leak Checker and its features. You can also read the [FSE 2021 paper](https://manu.sridharan.net/files/FSE21Leaks.pdf)
-for more details, background, and evaluation.
+on the Resource Leak Checker for more details, background, and evaluation.
 
 ### Running the Resource Leak Checker on this repository
 
