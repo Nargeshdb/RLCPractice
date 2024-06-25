@@ -16,6 +16,8 @@ public class Server {
 
             socket = serverSocket.accept();
             clientSocket = new SocketWrapper(socket);
+            // Leak reported for this line, but it's a false positive.
+            // Fix by adding an appropriate annotation to SocketWrapper.
             System.out.println("Client connected: " + clientSocket.getSocket().getInetAddress().getHostAddress());
 
             String message;
